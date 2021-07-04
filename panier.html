@@ -19,40 +19,61 @@
 					</div>
 					<div class="col-2">
 						<a href="panier.html">
-						<i class="fas fa-shopping-cart fa-2x"></i>
-					</a>
+							<i class="fas fa-shopping-cart fa-2x"></i>
+						</a>
 					</div>
 				</div>
 			</div>
 		</nav>
 	</header>
 
-	<div class="resume">
-		<h2>Resumé des produits du panier</h2>
-		<p>prix</p>
-		<p>taille</p>
+	<div id="resume">
+		
 	</div>
 
+	<h2>Resumé des produits du panier</h2>
+	<p id="prixtotal"></p>
+
 	<div class="valider">
-		<form>
-			<label for="">valider</label>
-			<input id="validerpanier" type="submit" value="valider la commande">
-			<button>Soumettre</button>	
+		<form action="" method="get" class="form-example">
+			<div class="form-example">
+				<label for="name">Prenom: </label>
+				<input type="text" name="name" id="name" required>
+			</div>
+			<div class="form-example">
+				<label for="name">Nom: </label>
+				<input type="text" name="name" id="name" required>
+			</div>
+			<div class="form-example">
+				<label for="name">Adresse: </label>
+				<input type="text" name="name" id="name" required>
+			</div>
+			<div class="form-example">
+				<label for="name">Ville: </label>
+				<input type="text" name="name" id="name" required>
+			</div>
+			<div class="form-example">
+				<label for="email">Enter your email: </label>
+				<input type="email" name="email" id="email" required>
+			</div>
+			<div class="form-example">
+				<input type="submit" value="Valider">
+			</div>
 		</form>
 	</div>
 
 	<a href="index.html">
-	<p>Continuer mes achats</p>
+		<p>Continuer mes achats</p>
 	</a>
 
 
 
 
 
-<script src="panier.js"></script>
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="panier.js"></script>
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -11,7 +11,7 @@ const addToBasket = (teddy) => () => {
 
     const alreadyInBasket = currentBasket.find(
         (element) => element.id === teddy._id
-    );
+        );
 
     if (alreadyInBasket) {
         alreadyInBasket.quantity++;
@@ -31,25 +31,25 @@ const addToBasket = (teddy) => () => {
 const fetchTeddyById = () => {
     const teddyId = getIdInUrl();
     fetch(`http://localhost:3000/api/teddies/${teddyId}`)
-        .then(function(res) {
-            if (res.ok) {
-                return res.json();
-            }
-        })
-        .then(function(teddy) {
-            const addToBasketButton = document.getElementById("addToBasket");
-            addToBasketButton.addEventListener('click', addToBasket(teddy));
+    .then(function(res) {
+        if (res.ok) {
+            return res.json();
+        }
+    })
+    .then(function(teddy) {
+        const addToBasketButton = document.getElementById("addToBasket");
+        addToBasketButton.addEventListener('click', addToBasket(teddy));
 
-            let teddyHtml = document.getElementById("teddychoisie");
+        let teddyHtml = document.getElementById("teddychoisie");
 
-    
+        
         
         let newH2 = document.createElement("h2");
         newH2.innerHTML = teddy.name;
         teddyHtml.appendChild(newH2);
         
 
-         let newImg = document.createElement("img");
+        let newImg = document.createElement("img");
         newImg.src = teddy.imageUrl;
         teddyHtml.appendChild(newImg);
 
@@ -61,7 +61,7 @@ const fetchTeddyById = () => {
         let newP2 = document.createElement("p");
         newP2.innerHTML = teddy.price;
         teddyHtml.appendChild(newP2);
-        })
+    })
 }
 
 
