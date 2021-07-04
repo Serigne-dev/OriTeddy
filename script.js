@@ -7,12 +7,11 @@ document.addEventListener('DOMContentLoaded', function() { // On écoute quand l
   })
   .then(function(value) {
     for (let teddy of value){
-        console.log (teddy);
 
         let teddyHtml = document.getElementById("teddylist");
 
         let newA = document.createElement("a");
-        newA.setAttribute ("href", "produits.html");
+        newA.setAttribute ("href", "produits.html?id="+teddy._id);
         
         let newH2 = document.createElement("h2");
         newH2.innerHTML = teddy.name;
