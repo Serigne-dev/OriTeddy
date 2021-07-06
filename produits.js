@@ -59,7 +59,7 @@ const fetchTeddyById = () => {
         teddyHtml.appendChild(newP1);
 
         let newP2 = document.createElement("p");
-        newP2.innerHTML = teddy.price;
+        newP2.innerHTML = teddy.price + "€";
         teddyHtml.appendChild(newP2);
 
     })

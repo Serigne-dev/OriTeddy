@@ -17,14 +17,14 @@ function findFromBasket(){
         teddyHtml.appendChild(newImg);
 
         let newP2 = document.createElement("p");
-        newP2.innerHTML = teddy.price;
+        newP2.innerHTML = teddy.price +"€";
         teddyHtml.appendChild(newP2);
 
         prixTotal+=teddy.price;
     }
-
+    localStorage.setItem("totalPrice", JSON.stringify(prixTotal));
     let prixhtml = document.getElementById("prixtotal");
-    prixhtml.innerHTML = "prix total :"+ prixTotal;
+    prixhtml.innerHTML = " prix total : " + prixTotal + " €";
 }
 
 findFromBasket();
