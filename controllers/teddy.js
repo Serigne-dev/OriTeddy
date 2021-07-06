@@ -47,6 +47,7 @@ exports.getAllTeddies = (req, res, next) => {
  *
  */
  exports.orderTeddies = (req, res, next) => {
+  console.log("bla"+req.body.contact);
   if (!req.body.contact ||
     !req.body.contact.firstName ||
     !req.body.contact.lastName ||
@@ -85,8 +86,7 @@ Promise.all(queries).then(
     })
   }
   ).catch(
-  (error) => {
-    return res.status(500).json(new Error(error));
+  (error) => {    return res.status(500).json(new Error(error));
   }
   );
 };
