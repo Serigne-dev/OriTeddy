@@ -61,6 +61,7 @@ const fetchTeddyById = () => {
         let newP2 = document.createElement("p");
         newP2.innerHTML = teddy.price;
         teddyHtml.appendChild(newP2);
+
     })
 }
 

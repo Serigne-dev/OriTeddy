@@ -30,6 +30,7 @@ function findFromBasket(){
 findFromBasket();
 
 const getProductId = (basket) => basket.map(product => product.id);
+let validerCommande = document.getElementById("form");
 
 validerCommande.addEventListener('submit', function(e){
     e.preventDefault();
@@ -60,7 +61,15 @@ fetch("http://localhost:3000/api/teddies/order", {
         }
     })
     .then(function(value){
+        console.log(value);
+        localStorage.setItem("basket", JSON.stringify([]));
+        localStorage.setItem("orderId", JSON.stringify(value.orderId));
+         window.location.href = 'confirmation.html';
+
+
     });
 });
+
+
 
 
