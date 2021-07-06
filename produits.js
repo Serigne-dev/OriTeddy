@@ -65,6 +65,7 @@ const fetchTeddyById = () => {
 }
 
 
+
 fetchTeddyById();
 
 

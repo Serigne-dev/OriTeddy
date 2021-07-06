@@ -29,7 +29,7 @@ function findFromBasket(){
 
 findFromBasket();
 
-const validerCommande = document.getElementById ("form");
+const getProductId = (basket) => basket.map(product => product.id);
 
 validerCommande.addEventListener('submit', function(e){
     e.preventDefault();
@@ -44,6 +44,7 @@ validerCommande.addEventListener('submit', function(e){
   };
 
 const currentBasket = JSON.parse(localStorage.getItem("basket")) || [];
+const products = getProductId(currentBasket);
 
 fetch("http://localhost:3000/api/teddies/order", {
     method: 'POST',
@@ -51,7 +52,7 @@ fetch("http://localhost:3000/api/teddies/order", {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({contact: contact, products: currentBasket})
+    body: JSON.stringify({ contact, products })
   })
     .then(function(res){
         if(res.ok){
