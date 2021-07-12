@@ -1,26 +1,51 @@
+h1{
+	text-align: left;
+}
+
 ul {
 list-style-type: none;
+}
+
+.teddyCard{
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+	border-radius: 10px;
+	box-shadow: 0px 8px 10px #696767;
+	max-width: 500px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .caracteristiques{
 	display: flex;
 	justify-content: center;
 	padding-top: 60px;
-
 }
 
 .couleur, .taille{
 	width: 30%;
 }
 
-#teddylist img{
-	width: 15%;
+.teddyCard img{
+	width: 100%;
 }
 
-#teddychoisie img{
-	width: 25%;
+.teddyCard p{
+	text-align: center;
 }
 
-#resume img{
-	width: 30%;
+#prixtotal{
+	font-size: 20px;
+	text-align: center;
+	margin-top: 50px;
 }
+
+.valider{
+	margin-left: 5px;
+}
+
+.formulaire{
+	text-align: center;
+}
+

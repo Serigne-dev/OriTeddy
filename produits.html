@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="Fr">
 <head>
 	<title>Produits</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" media="screen and (max-width: 1280px)" href="petite_resolution.css" />
 	<script src="https://kit.fontawesome.com/5b8f1d9d86.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
@@ -29,28 +28,30 @@
 	</header>
 
 	<div id="teddychoisie"> </div>
+	<div class="formulaire">
 
-	<label for="pet-select">Choisissez une couleur</label>
-	<select name="Couleur" id="teddy-couleur">
-		<option value="noir">noir</option>
-		<option value="blanc">blanc</option>
-		<option value="bleu">bleu</option>
-		<option value="rouge">rouge</option>
-		<option value="vert">vert</option>
-		<option value="jaune">jaune</option>
-	</select>
+		<label for="teddy-couleur">Choisissez une couleur</label>
+		<select name="Couleur" id="teddy-couleur">
+			<option value="noir">noir</option>
+			<option value="blanc">blanc</option>
+			<option value="bleu">bleu</option>
+			<option value="rouge">rouge</option>
+			<option value="vert">vert</option>
+			<option value="jaune">jaune</option>
+		</select>
 
-	<label for="taille">Choisissez une taille:</label>
-	<select name="taille" id="teddy-taille">
-		<option value="XS">XS</option>
-		<option value="S">S</option>
-		<option value="M">M</option>
-		<option value="L">L</option>
-		<option value="XL">XL</option>
-		<option value="XXL">XXL</option>
-	</select>
+		<label for="teddy-taille">Choisissez une taille:</label>
+		<select name="taille" id="teddy-taille">
+			<option value="XS">XS</option>
+			<option value="S">S</option>
+			<option value="M">M</option>
+			<option value="L">L</option>
+			<option value="XL">XL</option>
+			<option value="XXL">XXL</option>
+		</select>
 
-	<input id="addToBasket" type="submit" value="Ajouter au panier">
+		<input id="addToBasket" type="submit" value="Ajouter au panier">
+	</div>
 
 	<script src="produits.js"></script>
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->

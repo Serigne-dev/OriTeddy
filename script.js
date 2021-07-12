@@ -6,17 +6,30 @@ document.addEventListener('DOMContentLoaded', function() { // On écoute quand l
     }
   })
   .then(function(value) {
-    for (let teddy of value){
+    printAllTeddies(value); //affiche ours
+  })
+  .catch(function(err) {
+    console.log(err);
+  });       
+});
 
-      let teddyHtml = document.getElementById("teddylist");
+/* affichage des ours */
+function printAllTeddies(teddyList){
+  for (let teddy of teddyList){
 
-      let newA = document.createElement("a");
-      newA.setAttribute ("href", "produits.html?id="+teddy._id);
+    let teddyHtml = document.getElementById("teddylist");
+
+    let newDiv = document.createElement("div");
+    newDiv.className = "teddyCard";
+
+    let newA = document.createElement("a");
+      // envoi vers page produit avec ID de l'ours dans l'URL
+      newA.setAttribute ("href", "produits.html?id="+teddy._id); 
       
       let newH2 = document.createElement("h2");
       newH2.innerHTML = teddy.name;
       newA.appendChild(newH2);
-      teddyHtml.appendChild(newA);
+      newDiv.appendChild(newA);
 
       let newImg = document.createElement("img");
       newImg.src = teddy.imageUrl;
@@ -25,15 +38,13 @@ document.addEventListener('DOMContentLoaded', function() { // On écoute quand l
 
       let newP1 = document.createElement("p");
       newP1.innerHTML = teddy.description;
-      teddyHtml.appendChild(newP1);
+      newDiv.appendChild(newP1);
 
       let newP2 = document.createElement("p");
       newP2.innerHTML = teddy.price+"€";
-      teddyHtml.appendChild(newP2);
+      newDiv.appendChild(newP2);
+
+      teddyHtml.appendChild(newDiv);
     }
-  })
-  .catch(function(err) {
-    // Une erreur est survenue
-  });       
-});
+  }
 
