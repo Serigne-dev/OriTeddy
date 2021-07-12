@@ -38,19 +38,19 @@
 		<form id="form" action="confirmation.html" method="get" class="form-example">
 			<div class="form-example">
 				<label for="prenom">Prenom: </label>
-				<input type="text" name="firstname" id="prenom" required>
+				<input type="text" name="firstname" id="prenom" required pattern="^[A-Za-zÀ-ÿ ,.'-]+$" minlength="2">
 			</div>
 			<div class="form-example">
 				<label for="nom">Nom: </label>
-				<input type="text" name="lastname" id="nom" required>
+				<input type="text" name="lastname" id="nom" required pattern="^[A-Za-zÀ-ÿ ,.'-]+$" minlength="2">
 			</div>
 			<div class="form-example">
 				<label for="adresse">Adresse: </label>
-				<input type="text" name="adress" id="adresse" required>
+				<input type="text" name="adress" id="adresse" required minlength="2">
 			</div>
 			<div class="form-example">
 				<label for="ville">Ville: </label>
-				<input type="text" name="city" id="ville" required>
+				<input type="text" name="city" id="ville" required minlength="2">
 			</div>
 			<div class="form-example">
 				<label for="email">email: </label>
