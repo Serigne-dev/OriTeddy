@@ -3,7 +3,6 @@ const getIdInUrl = () => {
     const urlParams = window.location.search;
     const params = new URLSearchParams(urlParams);
     const id = params.get("id"); //récupèration  de la valeur associée au paramètre id
-
     return id
 }
 

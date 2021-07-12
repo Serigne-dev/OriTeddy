@@ -1,17 +1,20 @@
-document.addEventListener('DOMContentLoaded', function() { // On écoute quand le document est chargé
-  fetch(" http://localhost:3000/api/teddies")
-  .then(function(res) {
-    if (res.ok) {
-      return res.json();
-    }
-  })
-  .then(function(value) {
+function getallTeddies{
+  document.addEventListener('DOMContentLoaded', function() { // On écoute quand le document est chargé
+    fetch(" http://localhost:3000/api/teddies")
+    .then(function(res) {
+      if (res.ok) {
+        return res.json();
+      }
+    })
+    .then(function(value) {
+      console.log("il y a " + value.length + " teddies"); // test
     printAllTeddies(value); //affiche ours
   })
-  .catch(function(err) {
-    console.log(err);
-  });       
-});
+    .catch(function(err) {
+      console.log(err);
+    });       
+  });
+}
 
 /* affichage des ours */
 function printAllTeddies(teddyList){
@@ -48,3 +51,4 @@ function printAllTeddies(teddyList){
     }
   }
 
+  getallTeddies();
