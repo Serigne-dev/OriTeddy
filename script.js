@@ -1,4 +1,4 @@
-function getallTeddies{
+function getallTeddies(){
   document.addEventListener('DOMContentLoaded', function() { // On écoute quand le document est chargé
     fetch(" http://localhost:3000/api/teddies")
     .then(function(res) {
